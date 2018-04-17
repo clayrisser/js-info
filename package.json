@@ -1,6 +1,6 @@
 {
   "name": "cross-environment",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Comprehensive cross platform way to get environment details",
   "homepage": "https://github.com/codejamninja/cross-environment",
   "bugs": {
@@ -10,7 +10,7 @@
   "files": [
     "lib"
   ],
-  "main": "",
+  "main": "lib/index.js",
   "license": "MIT",
   "author": {
     "name": "Jam Risser",
