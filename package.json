@@ -1,6 +1,6 @@
 {
   "name": "cross-environment",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Comprehensive cross platform way to get environment details",
   "homepage": "https://github.com/codejamninja/cross-environment",
   "bugs": {

@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 const { env, argv } = process;
 const customEnvironment = {};
+const customDefaults = {};
 // eslint-disable-next-line no-undef
 const browserWindow = typeof window === 'undefined' ? null : window;
 
@@ -16,9 +17,10 @@ export default function nodeEnvironment() {
   };
 }
 
-export function setEnvironment(environment) {
+export function setEnvironment(environment = {}, defaults = {}) {
   _.memoize.Cache = WeakMap;
   _.assign(customEnvironment, environment);
+  _.assign(customEnvironment, defaults);
 }
 
 function _getRuntime() {
@@ -132,7 +134,7 @@ export const getBrowser = _.memoize(_getBrowser);
 function _getEnv() {
   if (customEnvironment.env) return customEnvironment.env;
   const nodeEnv = (env.NODE_ENV || '').toLowerCase();
-  let environment = 'development';
+  let environment = customDefaults.env || 'development';
   if (_.get(env, '__DEV__', '').toLowerCase() === 'false') {
     environment = 'production';
   }
