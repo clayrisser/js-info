@@ -1,0 +1,50 @@
+{
+  "name": "cross-environment",
+  "version": "0.0.2",
+  "description": "Comprehensive cross platform way to get environment details",
+  "homepage": "https://github.com/codejamninja/cross-environment",
+  "bugs": {
+    "url": "https://github.com/codejamninja/cross-environment/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "",
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/cross-environment"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run lint && babel src -d lib",
+    "clean": "rm -rf lib",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
