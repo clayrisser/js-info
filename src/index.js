@@ -17,10 +17,10 @@ export default function nodeEnvironment() {
   };
 }
 
-export function setEnvironment(environment = {}, defaults = {}) {
-  _.memoize.Cache = WeakMap;
+export function setEnvironment({ environment = {}, defaults = {} }) {
+  _.memoize.Cache = Map;
   _.assign(customEnvironment, environment);
-  _.assign(customEnvironment, defaults);
+  _.assign(customDefaults, defaults);
 }
 
 function _getRuntime() {
@@ -144,12 +144,16 @@ function _getEnv() {
     return 'staging';
   } else if (_.includes(argv, '--prod') || _.includes(argv, '--production')) {
     return 'production';
+  } else if (_.includes(argv, '--dev') || _.includes(argv, '--development')) {
+    return 'development';
   } else if (nodeEnv === 'test' || nodeEnv === 'testing') {
     return 'testing';
   } else if (nodeEnv === 'stage' || nodeEnv === 'staging') {
     return 'staging';
   } else if (nodeEnv === 'prod' || nodeEnv === 'production') {
     return 'production';
+  } else if (nodeEnv === 'dev' || nodeEnv === 'development') {
+    return 'development';
   }
   return environment;
 }

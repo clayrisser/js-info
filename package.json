@@ -1,15 +1,13 @@
 {
   "name": "cross-environment",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Comprehensive cross platform way to get environment details",
   "homepage": "https://github.com/codejamninja/cross-environment",
   "bugs": {
     "url": "https://github.com/codejamninja/cross-environment/issues",
     "email": "jam@codejam.ninja"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "main": "lib/index.js",
   "license": "MIT",
   "author": {
@@ -44,7 +42,5 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "eslintIgnore": [
-    "lib"
-  ]
+  "eslintIgnore": ["lib"]
 }
