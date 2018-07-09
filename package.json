@@ -1,6 +1,6 @@
 {
   "name": "js-info",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get system information about your JavaScript runtime engine",
   "homepage": "https://github.com/codejamninja/js-info",
   "bugs": {
@@ -27,6 +27,7 @@
     "example": "babel-node example",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
+    "prepublish": "npm run build",
     "test": "npm run lint"
   },
   "dependencies": {

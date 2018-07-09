@@ -4,8 +4,7 @@ import includes from 'lodash/includes';
 const env = process ? process.env || {} : {};
 const argv = process ? process.argv || {} : {};
 
-export default function getEnvironment() {
-  let environment = 'development';
+export default function getEnvironment(environment = 'development') {
   const nodeEnv = (env.NODE_ENV || '').toLowerCase();
   if (includes(argv, '--test') || includes(argv, '--testing')) {
     environment = 'testing';
