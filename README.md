@@ -1,8 +1,8 @@
-# cross-environment
+# js-info
 
-[![GitHub stars](https://img.shields.io/github/stars/codejamninja/cross-environment.svg?style=social&label=Stars)](https://github.com/codejamninja/cross-environment)
+[![GitHub stars](https://img.shields.io/github/stars/codejamninja/js-info.svg?style=social&label=Stars)](https://github.com/codejamninja/js-info)
 
-> Comprehensive cross platform way to get environment details
+> Get system information about your JavaScript runtime engine
 
 Please ★ this repo if you found it useful ★ ★ ★
 
@@ -22,7 +22,7 @@ Please ★ this repo if you found it useful ★ ★ ★
 ## Installation
 
 ```sh
-npm install --save cross-environment
+npm install --save js-info
 ```
 
 
@@ -34,32 +34,32 @@ npm install --save cross-environment
 ## Usage
 
 ```sh
-import crossEnvironment from 'cross-environment';
+import { getInfo } from 'js-info';
 
-console.log(crossEnvironment());
+console.log(getInfo());
 ```
 
 
 ## Support
 
-Submit an [issue](https://github.com/codejamninja/cross-environment/issues/new)
+Submit an [issue](https://github.com/codejamninja/js-info/issues/new)
 
 
 ## Contributing
 
-Review the [guidelines for contributing](https://github.com/codejamninja/cross-environment/blob/master/CONTRIBUTING.md)
+Review the [guidelines for contributing](https://github.com/codejamninja/js-info/blob/master/CONTRIBUTING.md)
 
 
 ## License
 
-[MIT License](https://github.com/codejamninja/cross-environment/blob/master/LICENSE)
+[MIT License](https://github.com/codejamninja/js-info/blob/master/LICENSE)
 
 [Jam Risser](https://codejam.ninja) © 2018
 
 
 ## Changelog
 
-Review the [changelog](https://github.com/codejamninja/cross-environment/blob/master/CHANGELOG.md)
+Review the [changelog](https://github.com/codejamninja/js-info/blob/master/CHANGELOG.md)
 
 
 ## Credits
