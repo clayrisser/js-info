@@ -68,8 +68,9 @@ class OS {
       ubuntu: this.ubuntu,
       unix: this.unix,
       value: this.value,
-      win: this.win,
       win32: this.win32,
+      win64: this.win64,
+      win: this.win,
       windows: this.windows
     };
   }
@@ -150,16 +151,20 @@ class OS {
     return this.value === 'wii';
   }
 
+  get win32() {
+    return this.value === 'win32';
+  }
+
+  get win64() {
+    return this.value === 'win64';
+  }
+
   get win() {
-    return this.win32;
+    return this.win32 || this.win64;
   }
 
   get windows() {
     return this.win32;
-  }
-
-  get win32() {
-    return this.value === 'win32';
   }
 }
 

@@ -16,6 +16,12 @@ export default function getOS() {
       return 'redhat';
     }
     if (process.platform && process.platform.length) {
+      if (
+        process.platform === 'win32' &&
+        (/64/.test(process.arch) || process.env.PROCESSOR_ARCHITEW6432)
+      ) {
+        return 'win64';
+      }
       return process.platform;
     }
     return 'unknown';
@@ -23,6 +29,12 @@ export default function getOS() {
   if (typeof window === 'undefined') return 'unknown';
   const userAgent = get(window, 'navigator.userAgent', '');
   if (/windows/i.test(userAgent)) {
+    if (
+      /(x86.|win|amd|wow|x64_)64/i.test(userAgent) ||
+      /x64;/i.test(userAgent)
+    ) {
+      return 'win64';
+    }
     return 'win32';
   } else if (/ipad|iphone|ipod/i.test(userAgent)) {
     return 'ios';
