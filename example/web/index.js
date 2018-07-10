@@ -21,7 +21,11 @@ class App extends Component {
 
   renderData(data) {
     if (_.isBoolean(data)) {
-      return <div>{data.toString()}</div>;
+      return (
+        <div style={{ fontWeight: data ? 'bold' : null, fontStyle: 'italic' }}>
+          {data.toString()}
+        </div>
+      );
     }
     return (
       <table>

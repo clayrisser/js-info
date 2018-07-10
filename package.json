@@ -1,6 +1,6 @@
 {
   "name": "js-info",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Get system information about your JavaScript runtime engine",
   "homepage": "https://github.com/codejamninja/js-info",
   "bugs": {
@@ -24,8 +24,9 @@
   "scripts": {
     "build": "npm run clean && npm run lint && babel src -d lib",
     "clean": "rm -rf lib .cache dist",
-    "deploy": "npm run clean && npm run lint && parcel build example/web/index.html && gh-pages -d dist",
+    "deploy": "npm run example:build && gh-pages -d dist",
     "example": "babel-node example/node && parcel example/web/index.html",
+    "example:build": "npm run build && parcel build example/web/index.html --public-url ./",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",

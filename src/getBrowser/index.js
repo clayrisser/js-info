@@ -5,7 +5,8 @@ import { runtime } from '..';
 function isOpera() {
   if (!!window.opr && !!window.opr.addons) return true;
   if (!!window.opera) return true;
-  if (window.navigator.userAgent.indexOf(' OPR/') >= 0) return true;
+  const { userAgent } = window.navigator;
+  if (/ opr/i.test(userAgent)) return true;
   return false;
 }
 
@@ -34,7 +35,10 @@ function isEdge() {
 }
 
 function isChrome() {
-  return !!window.chrome && !!window.chrome.webstore;
+  if (!!window.chrome && !!window.chrome.webstore) return true;
+  const { userAgent } = window.navigator;
+  if (/chrome/i.test(userAgent)) return true;
+  return false;
 }
 
 export default function getBrowser() {
