@@ -8,9 +8,9 @@ export default function getBrowserEngine() {
   if ((browser.chrome || browser.opera) && !!window.CSS) {
     return 'blink';
   }
-  if (/webkit/i.test(userAgent)) return 'webkit';
   if (browser.firefox || /gecko/i.test(userAgent)) return 'gecko';
   if (browser.ie) return 'trident';
   if (browser.edge) return 'edgehtml';
+  if (/webkit/i.test(userAgent)) return 'webkit';
   return 'unknown';
 }
