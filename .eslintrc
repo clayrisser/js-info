@@ -3,9 +3,10 @@
   "parser": "babel-eslint",
   "globals": { "window": true },
   "rules": {
-    "no-extra-boolean-cast": "off",
     "class-methods-use-this": "off",
+    "default-case": "off",
     "global-require": "off",
+    "no-extra-boolean-cast": "off",
     "no-new-func": "off",
     "no-param-reassign": "off",
     "no-plusplus": "off",

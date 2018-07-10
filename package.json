@@ -1,6 +1,6 @@
 {
   "name": "js-info",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Get system information about your JavaScript runtime engine",
   "homepage": "https://github.com/codejamninja/js-info",
   "bugs": {
@@ -31,6 +31,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "deasync": "^0.1.13",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
