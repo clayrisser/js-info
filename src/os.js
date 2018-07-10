@@ -28,7 +28,7 @@ class OS {
   }
 
   get darwin() {
-    return this.value === 'darwin' || this.ios;
+    return this.ios || this.mac;
   }
 
   get debian() {
@@ -94,7 +94,7 @@ class OS {
   }
 
   get mac() {
-    return this.darwin;
+    return this.value === 'mac';
   }
 
   get nintendo() {
@@ -164,7 +164,7 @@ class OS {
   }
 
   get windows() {
-    return this.win32;
+    return this.win;
   }
 }
 

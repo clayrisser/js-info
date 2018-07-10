@@ -1,6 +1,6 @@
 {
   "name": "js-info",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Get system information about your JavaScript runtime engine",
   "homepage": "https://github.com/codejamninja/js-info",
   "bugs": {

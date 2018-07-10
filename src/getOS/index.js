@@ -22,6 +22,7 @@ export default function getOS() {
       ) {
         return 'win64';
       }
+      if (process.platform === 'darwin') return 'mac';
       return process.platform;
     }
     return 'unknown';
@@ -39,7 +40,7 @@ export default function getOS() {
   } else if (/ipad|iphone|ipod/i.test(userAgent)) {
     return 'ios';
   } else if (/mac\sos\sx/i.test(userAgent)) {
-    return 'darwin';
+    return 'mac';
   } else if (/android/i.test(userAgent)) {
     return 'android';
   } else if (/debian/i.test(userAgent)) {

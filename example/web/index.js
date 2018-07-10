@@ -50,6 +50,7 @@ class App extends Component {
       <div>
         <h1>JS Info</h1>
         {this.renderInfo()}
+        {window.navigator.userAgent}
       </div>
     );
   }

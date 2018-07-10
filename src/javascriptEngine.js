@@ -3,9 +3,15 @@ import memoize from 'lodash/memoize';
 let getJavascriptEngine = null;
 
 class JavascriptEngine {
+  get chakra() {
+    return this.value === 'chakra';
+  }
+
   get info() {
     return {
+      chakra: this.chakra,
       jsc: this.jsc,
+      nitro: this.nitro,
       spidermonkey: this.spidermonkey,
       v8: this.v8,
       value: this.value
@@ -13,7 +19,11 @@ class JavascriptEngine {
   }
 
   get jsc() {
-    return this.value === 'jsc';
+    return this.value === 'jsc' || this.nitro;
+  }
+
+  get nitro() {
+    return this.value === 'nitro';
   }
 
   get spidermonkey() {
