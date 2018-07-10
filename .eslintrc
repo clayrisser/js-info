@@ -1,11 +1,13 @@
 {
-  "extends": ["airbnb/base", "prettier"],
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "globals": { "window": true },
   "rules": {
+    "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "default-case": "off",
     "global-require": "off",
+    "import/no-extraneous-dependencies": "off",
     "no-extra-boolean-cast": "off",
     "no-new-func": "off",
     "no-param-reassign": "off",
@@ -13,13 +15,15 @@
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "no-use-before-define": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
     "no-unused-vars": [
       "warn",
       {
-        "vars": "all",
         "args": "after-used",
+        "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true,
-        "argsIgnorePattern": "^_"
+        "vars": "all"
       }
     ],
     "comma-dangle": ["error", "never"]
