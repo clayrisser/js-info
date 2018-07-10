@@ -24,7 +24,7 @@
   "scripts": {
     "build": "npm run clean && npm run lint && babel src -d lib",
     "clean": "rm -rf lib .cache dist",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run clean && npm run lint && parcel build example/web/index.html && gh-pages -d dist",
     "example": "babel-node example/node && parcel example/web/index.html",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
