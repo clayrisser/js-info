@@ -60,6 +60,7 @@ class OS {
       mac: this.mac,
       nintendo: this.nintendo,
       openbsd: this.openbsd,
+      osx: this.osx,
       redhat: this.redhat,
       rhel: this.rhel,
       slackware: this.slackware,
@@ -103,6 +104,10 @@ class OS {
 
   get openbsd() {
     return this.value === 'openbsd';
+  }
+
+  get osx() {
+    return this.mac;
   }
 
   get redhat() {

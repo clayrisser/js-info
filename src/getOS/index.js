@@ -3,6 +3,16 @@ import { runtime } from '..';
 
 export default function getOS() {
   if (runtime.node) {
+    if (process.platform && process.platform.length) {
+      if (
+        process.platform === 'win32' &&
+        (/64/.test(process.arch) || process.env.PROCESSOR_ARCHITEW6432)
+      ) {
+        return 'win64';
+      }
+      if (process.platform === 'darwin') return 'mac';
+      return process.platform;
+    }
     const release = getRelease();
     if (/ubuntu/i.test(release)) {
       return 'ubuntu';
@@ -14,16 +24,6 @@ export default function getOS() {
       return 'fedora';
     } else if (/red\shat/i.test(release)) {
       return 'redhat';
-    }
-    if (process.platform && process.platform.length) {
-      if (
-        process.platform === 'win32' &&
-        (/64/.test(process.arch) || process.env.PROCESSOR_ARCHITEW6432)
-      ) {
-        return 'win64';
-      }
-      if (process.platform === 'darwin') return 'mac';
-      return process.platform;
     }
     return 'unknown';
   }
